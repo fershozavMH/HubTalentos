@@ -15,6 +15,7 @@ export const faces: Record<PersonId, { x: number; y: number; aspect: number }> =
   manuel: { x: 0.52, y: 0.22, aspect: 1.25 },
   carel: { x: 0.51, y: 0.24, aspect: 1 },
   julio: { x: 0.52, y: 0.32, aspect: 1.25 },
+  fernando: { x: 0.51, y: 0.25, aspect: 1.25 },
 };
 
 const clamp = (v: number, min: number, max: number) => Math.min(max, Math.max(min, v));

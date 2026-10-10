@@ -1,4 +1,4 @@
-export type TalentId = "arylene" | "yuri" | "manuel" | "carel" | "julio";
+export type TalentId = "arylene" | "yuri" | "manuel" | "carel" | "julio" | "fernando";
 
 export type AreaId =
   | "estructura"
@@ -8,7 +8,9 @@ export type AreaId =
   | "marketing"
   | "branding"
   | "cliente"
-  | "liderazgo";
+  | "liderazgo"
+  | "software"
+  | "automatizacion";
 
 export type Talent = {
   id: TalentId;
@@ -193,6 +195,32 @@ export const talents: Talent[] = [
     photo: "/talents/julio.jpg",
     areas: ["marketing", "branding"],
   },
+  {
+    id: "fernando",
+    name: "Fernando Zavala",
+    firstName: "Fernando",
+    field: "Tecnología",
+    role: "Software a la Medida · Automatización e IA",
+    credentials: ["Líder de Tecnología en Machinery Hunters · Fundador de Onvexa"],
+    quote: "Que tu empresa corra con sistemas, no con hojas de cálculo.",
+    bio: [
+      "Ayudo a negocios de cualquier sector a resolver sus necesidades tecnológicas: sitios web, sistemas a la medida, automatización de procesos e inteligencia artificial aplicada a sus propios datos.",
+      "Con Onvexa, mi agencia de software, primero entiendo cómo trabaja tu negocio y después construyo solo lo que hace falta: soluciones claras, con tecnologías modernas, que tu equipo realmente use.",
+    ],
+    services: [
+      { text: "Sitios web y landing pages profesionales" },
+      { text: "Sistemas a la medida: citas en línea, catálogos y paneles de control" },
+      { text: "Aplicaciones web y móviles" },
+      { text: "Automatización de procesos e integración entre herramientas" },
+      { text: "Recolección y análisis de datos" },
+      { text: "IA aplicada: asistentes que responden con los datos de tu empresa" },
+    ],
+    collaborationsLabel: "Su agencia",
+    collaborations:
+      "Onvexa: software a la medida, automatización e IA para negocios de cualquier sector.",
+    photo: "/talents/fernando.jpg",
+    areas: ["software", "automatizacion"],
+  },
 ];
 
 export const areas: { id: AreaId; label: string }[] = [
@@ -204,6 +232,8 @@ export const areas: { id: AreaId; label: string }[] = [
   { id: "legal", label: "Legal: marcas y derecho digital" },
   { id: "branding", label: "Branding y contenido" },
   { id: "liderazgo", label: "Liderazgo y dirección" },
+  { id: "software", label: "Sitios web y software a la medida" },
+  { id: "automatizacion", label: "Automatización, datos e IA" },
 ];
 
 export const stages = [

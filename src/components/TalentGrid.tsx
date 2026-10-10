@@ -59,35 +59,32 @@ export function TalentGrid() {
             </li>
           ))}
 
-          <li>
-            <Reveal delay={0.2} className="h-full">
-              <TiltCard
-                max={6}
-                className="flex w-full flex-col justify-between gap-6 p-1 sm:aspect-[4/5] sm:p-4"
-              >
-                <ul className="flex -space-x-3" aria-hidden="true">
-                  {talents.map((t) => (
-                    <li key={t.id} className="relative block size-12 overflow-hidden rounded-full ring-2 ring-cream-100">
-                      <Image src={t.photo} alt="" fill sizes="48px" className="object-cover" style={avatarStyle(t.id)} />
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex flex-col gap-4 [transform:translateZ(40px)]">
-                  <p className="font-display text-3xl font-medium leading-[1.1] text-navy-900">
+          <li className="sm:col-span-2 lg:col-span-3">
+            <Reveal delay={0.2}>
+              <div className="flex flex-col gap-6 border-t border-navy-900/15 pt-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12 lg:pt-10">
+                <div className="flex flex-col gap-5 lg:max-w-2xl">
+                  <ul className="flex -space-x-3" aria-hidden="true">
+                    {talents.map((t) => (
+                      <li key={t.id} className="relative block size-12 overflow-hidden rounded-full ring-2 ring-cream-100">
+                        <Image src={t.photo} alt="" fill sizes="48px" className="object-cover" style={avatarStyle(t.id)} />
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="font-display text-3xl font-medium leading-[1.1] text-navy-900 sm:text-4xl">
                     Empieza por el diagnóstico.
                   </p>
                   <p className="text-ink-soft">
                     Una plática de confianza para identificar en qué etapa está tu empresa y qué necesita para dar el siguiente
                     paso.
                   </p>
-                  <a
-                    href="#contacto"
-                    className="inline-flex w-fit items-center gap-2 rounded-sm bg-navy-900 px-5 py-3 text-sm font-semibold text-cream-50 transition hover:bg-navy-700"
-                  >
-                    Agenda tu diagnóstico <span aria-hidden="true">→</span>
-                  </a>
                 </div>
-              </TiltCard>
+                <a
+                  href="#contacto"
+                  className="inline-flex w-fit shrink-0 items-center gap-2 rounded-sm bg-navy-900 px-6 py-3.5 text-sm font-semibold text-cream-50 transition hover:bg-navy-700"
+                >
+                  Agenda tu diagnóstico <span aria-hidden="true">→</span>
+                </a>
+              </div>
             </Reveal>
           </li>
         </ul>

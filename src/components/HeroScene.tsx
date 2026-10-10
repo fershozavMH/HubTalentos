@@ -81,7 +81,7 @@ export function HeroScene() {
               <HubScene onHover={setLabel} onSelect={onSelect} reduced={reduced} active={visible} />
             </div>
             <p className="sr-only">
-              Escena interactiva: Gabriel Iván Buchanan al centro y cinco especialistas en órbita. Los mismos perfiles están en la sección Talentos.
+              Escena interactiva: Gabriel Iván Buchanan al centro y seis especialistas en órbita. Los mismos perfiles están en la sección Talentos.
             </p>
           </>
         ) : (

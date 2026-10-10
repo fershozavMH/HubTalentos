@@ -7,7 +7,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Hub de Talentos · Gabriel Iván Buchanan",
   description:
-    "Red de talento empresarial. Diagnóstico, conexión y acompañamiento con especialistas probados en estructura, ventas, marketing, legal y marca.",
+    "Red de talento empresarial. Diagnóstico, conexión y acompañamiento con especialistas probados en estructura, ventas, marketing, legal, marca y tecnología.",
   openGraph: {
     title: "Hub de Talentos",
     description:
