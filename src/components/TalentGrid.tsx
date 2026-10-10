@@ -21,7 +21,7 @@ export function TalentGrid() {
           </p>
         </Reveal>
 
-        <ul className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 [perspective:1600px]">
+        <ul className="mt-10 grid sm:mt-14 gap-8 sm:grid-cols-2 lg:grid-cols-3 [perspective:1600px]">
           {talents.map((t, i) => (
             <li key={t.id}>
               <Reveal delay={(i % 3) * 0.1} className="h-full">
@@ -31,7 +31,7 @@ export function TalentGrid() {
                   onClick={() => open(t.id)}
                   aria-label={`Ver perfil de ${t.name}, ${t.field}`}
                   max={10}
-                  className="group relative block aspect-[4/5] w-full cursor-pointer overflow-hidden rounded-md bg-navy-900 text-left shadow-[0_24px_50px_-30px_rgb(16_26_46/0.55)] transition-shadow duration-500 hover:shadow-[0_36px_70px_-30px_rgb(16_26_46/0.7)]"
+                  className="group relative block aspect-square w-full sm:aspect-[4/5] cursor-pointer overflow-hidden rounded-md bg-navy-900 text-left shadow-[0_24px_50px_-30px_rgb(16_26_46/0.55)] transition-shadow duration-500 hover:shadow-[0_36px_70px_-30px_rgb(16_26_46/0.7)]"
                 >
                   <Image
                     src={t.photo}
@@ -43,7 +43,7 @@ export function TalentGrid() {
                   />
                   <span className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/35 to-transparent" aria-hidden="true" />
 
-                  <span className="absolute inset-x-0 bottom-0 flex flex-col gap-1.5 p-6 [transform:translateZ(50px)]">
+                  <span className="absolute inset-x-0 bottom-0 flex flex-col gap-1.5 p-5 sm:p-6 [transform:translateZ(50px)]">
                     <span className="eyebrow text-gold-400">{t.field}</span>
                     <span className="font-display text-3xl font-medium leading-none text-cream-50">{t.name}</span>
                     <span className="text-sm text-cream-100/80">{t.role}</span>
@@ -63,7 +63,7 @@ export function TalentGrid() {
             <Reveal delay={0.2} className="h-full">
               <TiltCard
                 max={6}
-                className="flex aspect-[4/5] w-full flex-col justify-between gap-6 p-2 sm:p-4"
+                className="flex w-full flex-col justify-between gap-6 p-1 sm:aspect-[4/5] sm:p-4"
               >
                 <ul className="flex -space-x-3" aria-hidden="true">
                   {talents.map((t) => (

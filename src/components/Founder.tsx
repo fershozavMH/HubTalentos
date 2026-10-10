@@ -6,11 +6,11 @@ import { TiltCard } from "./TiltCard";
 export function Founder() {
   return (
     <section id="coordinador" className="bg-cream-100 py-24 text-ink sm:py-32">
-      <div className="mx-auto grid max-w-7xl items-start gap-14 px-5 sm:px-8 lg:grid-cols-[5fr_7fr] lg:gap-20">
-        <Reveal className="mx-auto w-full max-w-md [perspective:1400px] lg:sticky lg:top-28 lg:max-w-none">
+      <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 sm:px-8 lg:grid-cols-[5fr_7fr] lg:gap-20">
+        <Reveal className="mx-auto w-full max-w-[19rem] sm:max-w-md [perspective:1400px] lg:sticky lg:top-28 lg:max-w-none">
           <TiltCard max={7} glare className="relative aspect-[4/5] w-full">
             <span
-              className="absolute -bottom-5 -right-5 size-full rounded-md bg-cream-200 [transform:translateZ(-30px)]"
+              className="absolute -bottom-3 -right-3 size-full sm:-bottom-5 sm:-right-5 rounded-md bg-cream-200 [transform:translateZ(-30px)]"
               aria-hidden="true"
             />
             <div className="relative size-full overflow-hidden rounded-md bg-cream-200 shadow-[0_40px_80px_-30px_rgb(16_26_46/0.5)]">

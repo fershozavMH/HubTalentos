@@ -3,7 +3,7 @@ import { Reveal } from "./Reveal";
 
 export function Reasons() {
   return (
-    <section id="por-que" className="relative overflow-hidden bg-navy-900 py-24 sm:py-32">
+    <section id="por-que" className="relative overflow-hidden bg-navy-900 py-16 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal className="flex flex-col gap-6">
           <p className="eyebrow text-gold-400">Por qué con nosotros</p>

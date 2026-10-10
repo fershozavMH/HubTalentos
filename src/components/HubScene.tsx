@@ -295,7 +295,7 @@ function Scene({ onHover, onSelect, reduced }: Omit<Props, "active">) {
 export default function HubScene({ onHover, onSelect, reduced, active }: Props) {
   return (
     <Canvas
-      dpr={[1, 2]}
+      dpr={[1, 1.75]}
       frameloop={active ? "always" : "never"}
       camera={{ position: [0, 0.8, 12], fov: 38 }}
       gl={{ antialias: true, alpha: true }}

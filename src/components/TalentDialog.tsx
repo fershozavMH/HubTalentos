@@ -64,7 +64,7 @@ export function TalentDialogProvider({ children }: { children: ReactNode }) {
             key={talent.id}
             className="relative grid max-h-[calc(100dvh-1.5rem)] overflow-y-auto rounded-md bg-navy-900 text-cream-100 shadow-[0_40px_120px_-20px_rgb(0_0_0/0.7)] md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]"
           >
-            <div className="relative aspect-[4/5] md:aspect-auto md:min-h-full">
+            <div className="relative aspect-[4/3] md:aspect-auto md:min-h-full">
               <Image
                 src={talent.photo}
                 alt={`Retrato de ${talent.name}`}
@@ -76,7 +76,7 @@ export function TalentDialogProvider({ children }: { children: ReactNode }) {
               <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/10 to-transparent md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-navy-900" />
             </div>
 
-            <div className="flex min-w-0 flex-col gap-6 p-6 sm:p-9 md:p-10">
+            <div className="flex min-w-0 flex-col gap-5 p-5 sm:gap-6 sm:p-9 md:p-10">
               <button
                 type="button"
                 onClick={close}

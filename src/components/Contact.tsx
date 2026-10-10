@@ -43,7 +43,7 @@ export function Contact() {
   ];
 
   return (
-    <section id="contacto" className="relative overflow-hidden bg-navy-950 py-24 sm:py-32">
+    <section id="contacto" className="relative overflow-hidden bg-navy-950 py-16 sm:py-28">
       <div
         className="pointer-events-none absolute inset-0"
         aria-hidden="true"
@@ -52,7 +52,7 @@ export function Contact() {
             "radial-gradient(48rem 30rem at 85% 10%, rgb(36 53 87 / 0.6), transparent 70%)",
         }}
       />
-      <div className="relative mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
+      <div className="relative mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
         <Reveal className="flex flex-col gap-8">
           <p className="eyebrow text-gold-400">Siguiente paso</p>
           <h2 className="text-[clamp(3rem,7vw,5.2rem)] font-medium leading-[1] tracking-[-0.02em] text-cream-50">
@@ -69,7 +69,7 @@ export function Contact() {
               href={whatsappLink("Hola Gabriel, quiero agendar mi diagnóstico del Hub de Talentos.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 rounded-sm bg-gold-500 px-7 py-3.5 font-semibold text-navy-950 transition hover:bg-gold-300"
+              className="group inline-flex w-full items-center justify-center gap-3 rounded-sm bg-gold-500 px-7 py-3.5 sm:w-auto font-semibold text-navy-950 transition hover:bg-gold-300"
             >
               Escríbeme por WhatsApp
               <span aria-hidden="true" className="transition group-hover:translate-x-1">
@@ -101,9 +101,9 @@ export function Contact() {
             {rows.map((r) => (
               <div
                 key={r.label}
-                className="grid grid-cols-[6.5rem_minmax(0,1fr)_auto] items-center gap-4 border-b border-cream-100/10 py-5 first:border-t"
+                className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-4 gap-y-1 border-b border-cream-100/10 py-4 first:border-t sm:grid-cols-[6.5rem_minmax(0,1fr)_auto] sm:py-5"
               >
-                <dt className="eyebrow !text-[0.7rem] text-gold-400">{r.label}</dt>
+                <dt className="eyebrow col-span-2 !text-[0.7rem] text-gold-400 sm:col-span-1">{r.label}</dt>
                 <dd className="min-w-0 break-words text-cream-50">
                   {r.href ? (
                     <a href={r.href} target="_blank" rel="noopener noreferrer" className="underline decoration-gold-500/50 underline-offset-4 hover:decoration-gold-300">

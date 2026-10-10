@@ -13,7 +13,7 @@ export function Stages() {
   const scaleY = scaleX;
 
   return (
-    <section id="como-funciona" className="relative bg-navy-900 py-24 sm:py-32">
+    <section id="como-funciona" className="relative bg-navy-900 py-16 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal className="flex max-w-3xl flex-col gap-6">
           <p className="eyebrow text-gold-400">Qué hacemos</p>
@@ -38,7 +38,7 @@ export function Stages() {
             {stages.map((s, i) => (
               <li key={s.title} className="relative">
                 <span
-                  className="absolute -left-[1.7rem] top-9 size-2.5 rounded-full bg-gold-400 md:-top-[2.9rem] md:left-8"
+                  className="absolute -left-[1.875rem] top-[1.2rem] size-2.5 rounded-full bg-gold-400 md:-top-[2.9rem] md:left-0"
                   aria-hidden="true"
                 />
                 <Reveal delay={i * 0.12} className="h-full">

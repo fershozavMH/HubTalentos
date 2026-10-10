@@ -22,7 +22,7 @@ export function Nav() {
         scrolled || menu ? "bg-navy-950/80 shadow-[0_1px_0_rgb(255_255_255/0.05)] backdrop-blur-md" : ""
       }`}
     >
-      <nav aria-label="Principal" className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-5 sm:px-8">
+      <nav aria-label="Principal" className="mx-auto flex h-14 max-w-7xl sm:h-16 items-center justify-between gap-6 px-5 sm:px-8">
         <a href="#inicio" className="flex items-center gap-3" onClick={() => setMenu(false)}>
           <svg viewBox="0 0 64 64" className="size-8" aria-hidden="true">
             <circle cx="32" cy="32" r="21" fill="none" stroke="#c9a45c" strokeWidth="2.5" />

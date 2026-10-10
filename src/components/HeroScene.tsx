@@ -74,7 +74,7 @@ export function HeroScene() {
 
   return (
     <div className="flex flex-col items-center gap-3">
-      <div ref={wrapRef} className="relative h-[370px] w-full sm:h-[500px] lg:h-[620px]">
+      <div ref={wrapRef} className="relative h-[340px] w-full sm:h-[500px] lg:h-[620px]">
         {webgl ? (
           <>
             <div className="absolute inset-0" aria-hidden="true">

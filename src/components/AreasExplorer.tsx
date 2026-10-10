@@ -21,8 +21,8 @@ export function AreasExplorer() {
   const matched = current ? talents.filter((t) => t.areas.includes(current)) : talents;
 
   return (
-    <section id="areas" className="relative overflow-hidden bg-navy-950 py-24 sm:py-32">
-      <div className="relative mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-[1fr_1fr] lg:gap-20">
+    <section id="areas" className="relative overflow-hidden bg-navy-950 py-16 sm:py-28">
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[1fr_1fr] lg:gap-20">
         <Reveal className="flex flex-col gap-8">
           <div className="flex flex-col gap-6">
             <p className="eyebrow text-gold-400">Áreas que cubrimos</p>
@@ -45,7 +45,7 @@ export function AreasExplorer() {
                   onPointerLeave={() => setPreview(null)}
                   onFocus={() => setPreview(a.id)}
                   onBlur={() => setPreview(null)}
-                  className={`flex items-center gap-3 py-2 text-left text-[0.97rem] font-medium transition duration-300 ${
+                  className={`flex min-h-11 items-center gap-3 py-2 text-left text-[0.97rem] font-medium transition duration-300 ${
                     on
                       ? "text-gold-300"
                       : "text-cream-100/70 hover:text-cream-50"
@@ -85,7 +85,7 @@ export function AreasExplorer() {
                         : "opacity-30 grayscale [transform:translateX(-6px)]"
                     } ${current && hit ? "[transform:translateX(10px)]" : ""}`}
                   >
-                    <span className="relative block size-16 shrink-0 overflow-hidden rounded-full ring-1 ring-gold-500/60 sm:size-[4.5rem]">
+                    <span className="relative block size-14 shrink-0 overflow-hidden rounded-full ring-1 ring-gold-500/60 sm:size-[4.5rem]">
                       <Image
                         src={t.photo}
                         alt=""
