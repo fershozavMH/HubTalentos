@@ -8,6 +8,13 @@ import { faceCrop, type PersonId } from "@/data/faces";
 
 export type SceneTarget = PersonId;
 
+// @react-three/fiber 9 todavía crea un THREE.Clock interno; three lo marca como obsoleto.
+const warn = console.warn;
+console.warn = (...args: unknown[]) => {
+  if (typeof args[0] === "string" && args[0].includes("THREE.Clock")) return;
+  warn(...args);
+};
+
 type Props = {
   onHover: (label: string | null) => void;
   onSelect: (id: SceneTarget) => void;
