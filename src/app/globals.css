@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #101a2e;
+  --color-navy-900: #1b2842;
+  --color-navy-800: #243557;
+  --color-navy-700: #31476f;
+  --color-gold-300: #e6cd96;
+  --color-gold-400: #d6b36c;
+  --color-gold-500: #c9a45c;
+  --color-gold-700: #7d5f22;
+  --color-cream-50: #faf7f1;
+  --color-cream-100: #f5f1ea;
+  --color-cream-200: #ebe4d6;
+  --color-ink: #1a2233;
+  --color-ink-soft: #4a5468;
+
+  --font-display: "Newsreader Variable", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-sans: "DM Sans Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(201 164 92 / 0.55) var(--color-navy-950);
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-navy-950);
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(201 164 92 / 0.45);
+  border: 2px solid var(--color-navy-950);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-500);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-navy-950);
+  color: var(--color-cream-100);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  text-wrap: balance;
+}
+
+::selection {
+  background: var(--color-gold-500);
+  color: var(--color-navy-950);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold-400);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.tilt {
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 0.5s var(--ease-out-expo);
+  will-change: transform;
+}
+.tilt[data-active="true"] {
+  transition: transform 0.08s linear;
+}
+.tilt-glare {
+  background: radial-gradient(
+    420px circle at var(--gx, 50%) var(--gy, 0%),
+    rgb(255 255 255 / 0.13),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+.tilt[data-active="true"] .tilt-glare {
+  opacity: 1;
+}
+
+.rise {
+  animation: rise 1s var(--ease-out-expo) both;
+  animation-delay: var(--d, 0s);
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+}
+
+dialog.talent-dialog {
+  margin: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  max-width: min(64rem, calc(100vw - 1.5rem));
+  width: 100%;
+  max-height: calc(100dvh - 1.5rem);
+  overflow: visible;
+}
+dialog.talent-dialog::backdrop {
+  background: rgb(10 16 30 / 0.82);
+  backdrop-filter: blur(8px);
+}
+dialog.talent-dialog[open] {
+  animation: dialog-in 0.5s var(--ease-out-expo);
+}
+dialog.talent-dialog[open]::backdrop {
+  animation: fade-in 0.4s ease-out;
+}
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .tilt {
+    transform: none !important;
+  }
+}
